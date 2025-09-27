@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Historias de Instagram</title>
+    <style>
+      /*
+        Diseño básico para centrar el contenido en la página y facilitar la
+        lectura.  En esta página de ejemplo se muestra cómo incrustar un
+        contenido público de Instagram (una publicación o historia) y cargar
+        correctamente el script que procesa el bloque de Instagram.  Si se
+        carga la página sin el protocolo en la URL del script o el script
+        se inserta con comillas tipográficas (“ ” en lugar de " "), el
+        contenido no se mostrará.  Añadimos estilos mínimos para que el
+        ejemplo sea legible sin afectar a la funcionalidad.
+      */
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+      }
+      .container {
+        max-width: 600px;
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Historias de Instagram</h1>
+      <!--
+        A continuación se muestra un bloque de Instagram que incrusta una
+        publicación pública.  Para incrustar historias o cualquier otro
+        contenido de Instagram, puedes obtener el enlace "Insertar" desde
+        la interfaz web de Instagram y pegarlo aquí.  Es fundamental que el
+        script que procesa los bloques de Instagram se cargue con el
+        protocolo completo (https://) y comillas rectas para evitar
+        problemas como los descritos en 【640965114633346†L50-L67】.  Si se
+        añade este HTML dinámicamente mediante JavaScript, es posible que
+        tengas que llamar a `window.instgrm.Embeds.process()` después de
+        insertar el contenido para que el script lo procese【640965114633346†L124-L130】.
+      -->
+      <blockquote
+        class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DMqXjZdt0sU/"
+        data-instgrm-version="14"
+        style="width: 100%; margin: 0 auto;"
+      >
+        <a
+          href="https://www.instagram.com/p/DMqXjZdt0sU/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Ver en Instagram</a
+        >
+      </blockquote>
+    </div>
+    <!--
+      El siguiente script es fundamental para que Instagram procese el
+      contenido incrustado.  Utiliza siempre la URL completa con protocolo
+      HTTPS para que el navegador pueda cargar el script correctamente.
+      Evita usar comillas tipográficas o enlaces relativos como
+      //platform.instagram.com/en_US/embeds.js, ya que pueden causar
+      problemas de carga【640965114633346†L64-L67】.  Si colocas la línea
+      siguiente en el HTML antes de cerrar la etiqueta </body>, el script
+      se ejecutará automáticamente y procesará todos los bloques de
+      Instagram presentes en la página.
+    -->
+    <script async src="https://www.instagram.com/embed.js"></script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Historias de Instagram</title>
+  <style>
+    /* Estilos básicos para centrar el contenido y darle formato ligero */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      max-width: 100%;
+      width: 100%;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    /* Contenedor para los embeds de Instagram en disposición horizontal */
+    .instagram-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      /* Reducimos el espacio entre bloques */
+      gap: 10px;
+    }
+    .instagram-container blockquote {
+      flex: 1 1 calc(33.333% - 10px);
+      /* Garantiza que cada bloque ocupe aproximadamente un tercio del contenedor con menos separación */
+      min-width: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Vídeos principales</h1>
+    <div class="instagram-container">
+      <!-- Primer vídeo -->
+      <blockquote
+        class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DMqXjZdt0sU/"
+        data-instgrm-version="14"
+      >
+        <a
+          href="https://www.instagram.com/p/DMqXjZdt0sU/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver en Instagram
+        </a>
+      </blockquote>
+      <!-- Segundo vídeo -->
+      <blockquote
+        class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DL-maDjtTvI/"
+        data-instgrm-version="14"
+      >
+        <a
+          href="https://www.instagram.com/p/DL-maDjtTvI/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver en Instagram
+        </a>
+      </blockquote>
+      <!-- Tercer vídeo -->
+      <blockquote
+        class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DHZOIZBNtje/"
+        data-instgrm-version="14"
+      >
+        <a
+          href="https://www.instagram.com/p/DHZOIZBNtje/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver en Instagram
+        </a>
+      </blockquote>
+    </div>
+  </div>
+  <!-- Carga del script de Instagram para procesar los embeds -->
+  <script async src="https://www.instagram.com/embed.js"></script>
+</body>
+</html>

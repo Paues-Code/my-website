@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de Linkedin</title>
+
+    <!-- Hoja de estilo global -->
+    <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+<!-- Botón flotante de regreso -->
+<a href="../index.html#marcas" class="btn-float-back" aria-label="Volver">
+    ← Volver
+</a>
+
+<!-- HERO de marca -->
+<section class="brand-hero">
+    <div class="container brand-hero-box">
+        <!-- Logo de ShieldTech -->
+        <div class="brand-logo">
+            <img src="../assets/images/linkedin.png" alt="LinkedinLogo" />
+        </div>
+
+        <div class="brand-heading">
+            <h1>Linkedin</h1>
+            <p class="brand-tagline">
+                Accede a mi perfil de Linkedin mediante <a href="https://www.linkedin.com/in/pau-escuder-montoya-baa066244">este enlace</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<section id="cortos" class="category-section">
+    <div class="container">
+       <img src="../assets/images/Preparación%20al%20Examen%20MB-820.jpg" alt="Preparación del examen MB-820" width="50%">
+
+
+    </div>
+</section>
+
+
+<footer class="brand-footer">
+    <p>&copy; <span id="year"></span> Pau Escuder Montoya --- <a href="https://www.linkedin.com/in/pau-escuder-montoya-baa066244">Linkedin</a></p>
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
+

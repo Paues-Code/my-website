@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cuenta de Instagram</title>
+
+  <!-- Hoja de estilo global -->
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* Contenedor para los embeds de Instagram en disposición horizontal */
+    .instagram-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      /* Reducimos el espacio entre bloques */
+      gap: 10px;
+    }
+    .instagram-container blockquote {
+      flex: 1 1 calc(33.333% - 10px);
+      /* Garantiza que cada bloque ocupe aproximadamente un tercio del contenedor con menos separación */
+      min-width: 0;
+    }
+  </style>
+
+</head>
+<body>
+
+<!-- Botón flotante de regreso -->
+<a href="../index.html#marcas" class="btn-float-back" aria-label="Volver">
+  ← Volver
+</a>
+
+<!-- HERO de marca -->
+<section class="brand-hero">
+  <div class="container brand-hero-box">
+    <!-- Logo de ShieldTech -->
+    <div class="brand-logo">
+      <img src="../assets/images/instagramlogo.png" alt="InstagramLogo" />
+    </div>
+
+    <div class="brand-heading">
+      <h1>@paues.business</h1>
+      <p class="brand-tagline">
+        Aquí es dónde comparto con mi público todo aquello que me apasiona, que me llena y que resulta útil, y todo a través de <a href="https://www.instagram.com/paues.business/">aquí</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Métricas / Resultados -->
+<section class="brand-metrics">
+  <div class="container metrics-grid">
+    <div class="metric-card">
+      <h3>+10K</h3>
+      <p>Reproducciones totales</p>
+    </div>
+    <div class="metric-card">
+      <h3>+75</h3>
+      <p>Seguidores</p>
+    </div>
+    <div class="metric-card">
+      <h3>+85%</h3>
+      <p>de visualizaciones en el último mes</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="cortos" class="category-section">
+  <div class="container">
+    <h2 class="section-title">Vídeos principales</h2>
+    <div class="instagram-container">
+      <!-- Primer vídeo -->
+      <blockquote
+              class="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/p/DMqXjZdt0sU/"
+              data-instgrm-version="14"
+      >
+        <a
+                href="https://www.instagram.com/p/DMqXjZdt0sU/"
+                target="_blank"
+                rel="noopener noreferrer"
+        >
+          Ver en Instagram
+        </a>
+      </blockquote>
+      <!-- Segundo vídeo -->
+      <blockquote
+              class="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/p/DL-maDjtTvI/"
+              data-instgrm-version="14"
+      >
+        <a
+                href="https://www.instagram.com/p/DL-maDjtTvI/"
+                target="_blank"
+                rel="noopener noreferrer"
+        >
+          Ver en Instagram
+        </a>
+      </blockquote>
+      <!-- Tercer vídeo -->
+      <blockquote
+              class="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/p/DHZOIZBNtje/"
+              data-instgrm-version="14"
+      >
+        <a
+                href="https://www.instagram.com/p/DHZOIZBNtje/"
+                target="_blank"
+                rel="noopener noreferrer"
+        >
+          Ver en Instagram
+        </a>
+      </blockquote>
+    </div>
+  </div>
+  <script async src="https://www.instagram.com/embed.js"></script>
+</section>
+
+
+
+<!-- Pie de página -->
+<footer class="brand-footer">
+  <p>&copy; <span id="year"></span> Pau Escuder Montoya --- <a href="https://www.tiktok.com/@paues.business">@paues.business</a></p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
