@@ -7,7 +7,7 @@
 
     <meta
       name="description"
-      content="Portfolio de Pau Escuder, técnico especialista en computación"
+      content="Portfolio de Pau Escuder, una persona apasionada en la computación"
     />
     <meta name="author" content="Pau Escuder" />
     <title>Pau Escuder ‒ Mi web principal</title>
@@ -248,17 +248,19 @@
       ¿Necesitas contactar conmigo? Rellena el formulario y me pondré en contacto contigo lo antes posible.
     </p>
 
-    <form id="contact-form" action="partials/recogida.php" method="POST" >
-      
-      <input type="text"  name="nombre" placeholder="Nombre" required />
-      <input type="email" name="email" placeholder="Correo electrónico" required />
-      <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+      <!-- Este form de abajo es un intento fallido de procesar con php -->
+      <!-- <form id="contact-form" action="partials/recogida.php" method="POST" > -->
+
+      <form id="contact-form" action="./partials/recogida.html">
+           <input type="text"  name="nombre" placeholder="Nombre" required />
+           <input type="email" name="email" placeholder="Correo electrónico" required />
+           <textarea name="mensaje" placeholder="Mensaje" required></textarea>
 
       <!-- Redirección personalizada (opcional) -->
       <!-- <input type="hidden" name="_redirect" value="https://tusitio.com/gracias.html"> -->
 
-      <button type="submit"> Enviar mensaje </button>
-    </form>
+           <button type="submit"> Enviar mensaje </button>
+      </form>
   </div>
 </section>
 
@@ -316,5 +318,26 @@
     }
   });
 </script>
+<!--
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Obtener los valores del formulario
+            var nombre = document.getElementById('nombre').value;
+            var correo = document.getElementById('correo').value;
+            var mensaje = document.getElementById('mensaje').value;
+
+            // Codificar los datos en la URL y redirigir
+            var url = "./partials/recogida.html?nombre=" + encodeURIComponent(nombre) +
+                "&correo=" + encodeURIComponent(correo) +
+                "&mensaje=" + encodeURIComponent(mensaje);
+            console.log("URL de redirección: ", url);
+            window.location.href = url; // Redirige a la página con los datos
+        });
+    });
+</script>
+-->
   </body>
 </html>
