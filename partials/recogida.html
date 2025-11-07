@@ -7,20 +7,23 @@
 <body>
     <h1>Muchas gracias por ponerte en contacto conmigo :)</h1>
     <p>Pronto me pondré en contacto contigo</p>
-    <p>Nota: si lees este mensaje es porque el servidor de envíos de correo no está disponible, y por ende no llegará el correo. Pronto lo solucionaré. Sorry :(</p>
+  <!--  <p>Nota: si lees este mensaje es porque el servidor de envíos de correo no está disponible, y por ende no llegará el correo. Pronto lo solucionaré. Sorry :(</p>
+  -->
+    <p>Estos son los datos que has puesto en el formulario:</p>
+    <div id="resultado"></div>
     <script>
         // Obtener los parámetros de la URL
         var params = new URLSearchParams(window.location.search);
 
         // Mostrar los datos en la página
         var nombre = params.get('nombre');
-        var correo = params.get('correo');
+        var email = params.get('email');
         var mensaje = params.get('mensaje');
 
         // Mostrar los datos
         document.getElementById('resultado').innerHTML =
             '<strong>Nombre:</strong> ' + nombre + '<br>' +
-            '<strong>Correo:</strong> ' + correo + '<br>' +
+            '<strong>Correo:</strong> ' + email + '<br>' +
             '<strong>Mensaje:</strong> ' + mensaje;
     </script>
 </body>
