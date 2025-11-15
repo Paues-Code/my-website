@@ -3,6 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Gracias</title>
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "zhyZJuy3890J_np-N",
+            });
+        })();
+    </script>
+
 </head>
 <body>
     <h1>Muchas gracias por ponerte en contacto conmigo :)</h1>
@@ -26,5 +38,13 @@
             '<strong>Correo:</strong> ' + email + '<br>' +
             '<strong>Mensaje:</strong> ' + mensaje;
     </script>
+
+    <script src="envio.js" defer></script>
+
+    <form>
+        <p>Si los datos que has visualizado corresponden con lo rellenado en el formulario, presiona el botón de abajo</p>
+        <button type="submit" onclick="sendMail()">Enviar datos</button>
+    </form>
+
 </body>
 </html>
