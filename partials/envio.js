@@ -12,3 +12,7 @@ function sendMail() {
         },
     );
 }
+
+function closePage() {
+    window.location.href = "https://paues-code.github.io/my-website/";
+}
