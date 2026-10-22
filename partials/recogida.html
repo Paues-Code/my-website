@@ -16,6 +16,144 @@
         })();
     </script>
 
+    <style>
+        /* Paleta de colores y variables */
+        :root {
+            --primary-color: #4F46E5; /* Azul moderno */
+            --primary-hover: #4338CA;
+            --secondary-color: #E5E7EB; /* Gris claro */
+            --secondary-hover: #D1D5DB;
+            --text-main: #1F2937;
+            --text-light: #6B7280;
+            --bg-color: #F3F4F6;
+        }
+
+        /* Reseteo básico */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+            padding: 20px;
+        }
+
+        /* Tarjeta principal */
+        .container {
+            background-color: #ffffff;
+            max-width: 550px;
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Títulos y textos */
+        h1 {
+            font-size: 24px;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: var(--text-light);
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        /* Caja donde se muestran los datos del usuario */
+        .data-card {
+            background-color: #F9FAFB;
+            border: 1px solid #E5E7EB;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+        .data-card p {
+            margin-bottom: 16px;
+            font-size: 15px;
+            color: var(--text-main);
+            line-height: 1.5;
+        }
+
+        .data-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .data-card strong {
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: var(--text-light);
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .instruction {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        /* Contenedor de botones */
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap; /* En móviles los botones se apilarán si no caben */
+        }
+
+        /* Estilos generales para botones */
+        button {
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 6px rgba(79, 70, 229, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px); /* Pequeño efecto de elevación al pasar el ratón */
+            box-shadow: 0 6px 12px rgba(79, 70, 229, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            color: var(--text-main);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--secondary-hover);
+        }
+
+        /* Icono decorativo */
+        .icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+    </style>
+
 </head>
 <body>
     <h1>Muchas gracias por ponerte en contacto conmigo :)</h1>

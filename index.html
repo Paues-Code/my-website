@@ -40,7 +40,8 @@
       <nav>
         <ul class="nav-menu">
           <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#sobre-mi">Sobre mí ;) </a></li>
+          <!-- <li><a href="#mas_sobre_mi">Más sobre mí ;)</a></li> -->
           <li><a href="#estilo">Estilo</a></li>
           <li><a href="#clientes">Clientes</a></li>
           <li><a href="#contacto">Contacto</a></li>
@@ -69,7 +70,7 @@
     <section id="sobre-mi" class="about">
       <div class="container about-container">
         <div class="about-text">
-          <h2>Sobre mí</h2>
+          <h2>Sobre mí ;)</h2>
           <p>
             Actualmente graduado en julio de 2025 en el grado en Matemática Computacional y estudiante del grado en Ingeniería
             Informática en la UJI, además de estudiar el máster universitario en Ciberdelincuencia por la Universidad Europea de Madrid. Mis conocimientos
@@ -94,8 +95,10 @@
           </p>
         </div>
         <div class="about-image"></div>
+        <div class="about-image_1"></div>
       </div>
     </section>
+
 
     <!-- Estilo y valores -->
     <section id="estilo" class="style-section">
@@ -261,7 +264,7 @@
       <!-- Este form de abajo es un intento fallido de procesar con php -->
       <!-- <form id="contact-form" action="partials/recogida.php" method="POST" > -->
 
-      <form id="contact-form" action="./partials/recogida.html">
+      <form id="contact-form" action="./partials/recogida_mejor.html">
            <input type="text"  name="nombre" id="nombre" placeholder="Nombre" required />
            <input type="email" name="email" id="email" placeholder="Correo electrónico" required />
            <textarea name="mensaje" id="mensaje" placeholder="Mensaje" required></textarea>
@@ -340,7 +343,7 @@
             var mensaje = document.getElementById('mensaje').value;
 
             // Codificar los datos en la URL y redirigir
-            var url = "./partials/recogida.html?nombre=" + encodeURIComponent(nombre) +
+            var url = "./partials/recogida_mejor.html?nombre=" + encodeURIComponent(nombre) +
                 "&email=" + encodeURIComponent(email) +
                 "&mensaje=" + encodeURIComponent(mensaje);
             console.log("URL de redirección: ", url);

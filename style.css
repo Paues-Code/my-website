@@ -265,6 +265,14 @@ header.scrolled {
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
+.about-image_1 {
+    flex: 0 0 250px;
+    height: 420px;
+    background: url('assets/images/EISinBirrete.jpg') no-repeat center/cover;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
 /* Style Section */
 .style-section {
   background: #f7f7f7;

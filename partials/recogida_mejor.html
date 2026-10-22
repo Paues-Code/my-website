@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracias por contactar</title>
+    <link rel="icon" type="image/jpeg" href="../assets/images/Designer%20(1).jpeg" />
+
+    <!-- Google Fonts para una tipografía más moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "zhyZJuy3890J_np-N",
+            });
+        })();
+    </script>
+
+    <style>
+        /* Paleta de colores y variables */
+        :root {
+            --primary-color: #4F46E5; /* Azul moderno */
+            --primary-hover: #4338CA;
+            --secondary-color: #E5E7EB; /* Gris claro */
+            --secondary-hover: #D1D5DB;
+            --text-main: #1F2937;
+            --text-light: #6B7280;
+            --bg-color: #F3F4F6;
+        }
+
+        /* Reseteo básico */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+            padding: 20px;
+        }
+
+        /* Tarjeta principal */
+        .container {
+            background-color: #ffffff;
+            max-width: 550px;
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Títulos y textos */
+        h1 {
+            font-size: 24px;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: var(--text-light);
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        /* Caja donde se muestran los datos del usuario */
+        .data-card {
+            background-color: #F9FAFB;
+            border: 1px solid #E5E7EB;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+        .data-card p {
+            margin-bottom: 16px;
+            font-size: 15px;
+            color: var(--text-main);
+            line-height: 1.5;
+        }
+
+        .data-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .data-card strong {
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: var(--text-light);
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .instruction {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        /* Contenedor de botones */
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap; /* En móviles los botones se apilarán si no caben */
+        }
+
+        /* Estilos generales para botones */
+        button {
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 6px rgba(79, 70, 229, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px); /* Pequeño efecto de elevación al pasar el ratón */
+            box-shadow: 0 6px 12px rgba(79, 70, 229, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            color: var(--text-main);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--secondary-hover);
+        }
+
+        /* Icono decorativo */
+        .icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="icon">👋</div>
+    <h1>¡Muchas gracias por ponerte en contacto!</h1>
+    <p class="subtitle">Pronto me pondré en contacto contigo.</p>
+
+    <div class="data-card" id="resultado">
+        <!-- El contenido se inyectará aquí desde JavaScript -->
+    </div>
+
+    <p class="instruction">Si los datos mostrados son correctos, presiona el botón de abajo para enviar el mensaje de forma definitiva.</p>
+
+    <!-- Se ha cambiado type="submit" a type="button" para evitar recargas indeseadas antes de que emailjs haga el envío -->
+    <div class="button-group">
+        <button type="button" class="btn-primary" onclick="sendMail()">Enviar mensaje</button>
+        <button type="button" class="btn-secondary" onclick="closePage()">Cerrar página</button>
+    </div>
+</div>
+
+<script>
+    // Obtener los parámetros de la URL
+    const params = new URLSearchParams(window.location.search);
+
+    // Leer los datos (con un texto por defecto por si recargas la página sin parámetros)
+    const nombre = params.get('nombre') || '-';
+    const email = params.get('email') || '-';
+    const mensaje = params.get('mensaje') || '-';
+
+    // Inyectar los datos respetando la estructura CSS definida
+    document.getElementById('resultado').innerHTML =
+        '<p><strong>Nombre</strong> ' + nombre + '</p>' +
+        '<p><strong>Correo electrónico</strong> ' + email + '</p>' +
+        '<p><strong>Mensaje</strong> ' + mensaje + '</p>';
+
+    // Función genérica por si no la tenías definida
+    function closePage() {
+        if (window.history.length > 1) {
+            window.history.back();
+        } else {
+            window.close();
+        }
+    }
+</script>
+
+<script src="envio.js" defer></script>
+</body>
+</html>
